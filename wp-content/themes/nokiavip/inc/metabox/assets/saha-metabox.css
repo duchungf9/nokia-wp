@@ -1,0 +1,32 @@
+#saha-metabox .wp-tab-panel { display: none; }
+#saha-metabox .wp-tab-panel#saha-mb-tab-1 { display: block; }
+
+#saha-metabox .wp-tab-panel { max-height: none !important; }
+#saha-metabox ul.wp-tab-bar { -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+
+#saha-metabox ul.wp-tab-bar { padding-top: 5px; }
+#saha-metabox ul.wp-tab-bar:after { content: ""; display: block; height: 0; clear: both; visibility: hidden; zoom: 1; }
+#saha-metabox ul.wp-tab-bar li { padding: 5px 12px; font-size: 14px; }
+#saha-metabox ul.wp-tab-bar li a:focus { box-shadow: none; }
+
+#saha-metabox .inside .form-table tr { border-top: 1px solid #dfdfdf; }
+#saha-metabox .inside .form-table tr:first-child { border: none; }
+#saha-metabox .inside .form-table th { width: 240px; padding: 10px 30px 10px 0; }
+#saha-metabox .inside .form-table td { padding: 10px 0; }
+
+#saha-metabox .inside .form-table label { display: block; }
+#saha-metabox .inside .form-table th label span { margin-right: 7px; }
+
+#saha-metabox .saha-mb-uploader { margin-left: 5px; }
+
+#saha-metabox .inside .form-table th p.saha-mb-description { font-size: 12px; font-weight: normal; margin: 0; padding: 0; padding-top: 4px; }
+
+#saha-metabox .inside .form-table input[type="text"],
+#saha-metabox .inside .form-table input[type="number"],
+#saha-metabox .inside .form-table .saha-mb-textarea-code { width: 40%; }
+#saha-metabox .inside .form-table textarea { width: 100% }
+#saha-metabox .inside .form-table select { min-width: 40%; }
+
+#saha-metabox .saha-mb-reset { margin-top: 7px; }
+#saha-metabox .saha-mb-reset .saha-reset-btn { display: block; float: left; }
+#saha-metabox .saha-mb-reset .saha-reset-checkbox { float: left; display: none; margin-left: 10px; padding-top: 5px; }

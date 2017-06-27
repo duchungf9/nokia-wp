@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------------------*/
+/*	- Menus Walker
+/*-----------------------------------------------------------------------------------*/
+.menu-item-depth-0 .field-megamenu, .menu-item-depth-0.saha-megamenu .field-columns, .menu-item-depth-0.saha-megamenu .field-megamenu_auto,
+.menu-item-depth-0.saha-megamenu .field-image-upload, .menu-item-depth-0.saha-megamenu .field-megamenu_image,
+.menu-item-depth-0.saha-megamenu .field-custom_css, .menu-item-depth-0.saha-megamenu.saha-add-css .field-custom_styles, .menu-item-depth-1.saha-megamenu .field-hide,
+.menu-item-depth-1.saha-megamenu .field-sidebar, .menu-item-depth-2.saha-megamenu .field-sidebar {display: block;}
+.field-megamenu,.field-columns,.field-megamenu_auto,.field-image-upload,.field-megamenu_image,.saha-remove-image,.field-image_repeat,.field-image_position,
+.field-custom_css,.field-custom_styles,.field-hide,.field-sidebar {display: none;}
+
+/*Image megamenu*/
+.megamenu_image-image { display: none; width: 100%; background: #FAFAFA; border: 1px solid #DDD; margin: 10px auto; }
+.menu-item-depth-0.saha-no-megamenu .field-image_repeat, .menu-item-depth-0.saha-no-megamenu .field-image_position { display: none !important; }
+.menu-item-depth-0 .field-image_repeat, .menu-item-depth-0 .field-image_position { margin-bottom: 20px; }
+
+/*-----------------------------------------------------------------------------------*/
+/*	- Widgets
+/*-----------------------------------------------------------------------------------*/
+.services-list li { background: #fcfcfc; padding: 10px; border: 1px solid #e3e3e3; margin-bottom: 10px; overflow: hidden; cursor: move; }
+.services-list .placeholder { border: 1px dashed #e3e3e3; }
+.tab_sortable li { background: #fafafa; padding: 10px; border: 1px solid #eee; cursor: move; list-style: none; }
+.tab_sortable .placeholder { background-color: #ffe9e9; border: 1px dashed #E7A9A9; padding: 10px; height: 20px; }

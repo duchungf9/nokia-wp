@@ -1,0 +1,316 @@
+.site-header {
+    position: relative;
+    width: 100%;
+    z-index: 100;
+}
+
+/**
+ * Header inner
+ */
+.site-header-inner {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 0;
+}
+
+/**
+ * Header logo
+ */
+.site-header-inner .logo {
+    line-height: 55px;
+}
+
+/**
+ * Site logo
+ */
+.logo {
+    float: left;
+    height: 100%;
+
+    a {
+        display: block;
+    }
+
+    img {
+        display: inline-block;
+    }
+
+    h1 {
+        line-height: 55px;
+        margin: 0;
+    }
+}
+
+/**
+ * Search
+ */
+.site-header-inner #search-form {
+    float: left;
+    line-height: 1;
+    margin-top: 6px;
+    padding-left: 50px;
+
+    form {
+        position: relative;
+        display: inline-block;
+        border: 1px solid $border-color;
+        line-height: 1;
+    }
+
+    input[type="search"] {
+        min-width: 360px;
+        height: 42px;
+        font-size: 12px;
+        padding: 0 42px 0 10px;
+        background-color: transparent;
+        color: #777;
+        border: 0;    
+        @include box-shadow(none);
+    }
+
+    button {
+        font-family: $base-font-family;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 46px;
+        height: 42px;
+        font-size: 14px;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #777;
+        border: 0;
+    }
+
+    button:hover {
+        background-color: #f1f1f1;
+    }
+}
+
+/**
+ * Menu right
+ */
+.site-header-inner .menu-right {
+    float: right;
+}
+
+/**
+ * Right elements
+ */
+.menu-right {
+    > li {
+        margin-right: 15px;
+        padding-right: 15px;
+        border-right-width: 1px;
+        border-style: solid;
+        border-color: $border-color;
+    }
+
+    > li:last-child {
+        margin-right: 0;
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    .mobile-icon {
+        display: none;
+    }
+
+    .links {
+        display: inline-block;
+        position: relative;
+        color: #000;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    .links:hover, .sfHover .links {
+        color: #999;
+    }
+
+    .links i {
+        display: block;
+        font-size: 26px;
+        padding-bottom: 12px;
+        padding-right: 0;
+    }
+
+    > li > .links.sf-with-ul::after, > li > .cart-contents::after {
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        right: 50%;
+        margin-right: -8px;
+        border-bottom: 10px solid transparent;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        @include transition(all .3s ease);
+    }
+
+    > li.sfHover .links.sf-with-ul::after, > li.sfHover .cart-contents::after {
+        border-bottom-color: $color-6;
+    }
+
+    .sub-menu {
+        top: 120%;
+        left: auto;
+        right: 0;
+    }
+}
+
+.woocommerce-cart, .woocommerce-checkout {
+    .cart-contents::after {
+        display: none !important;
+    }
+}
+
+/**
+ * User nav
+ */
+.menu-right.sf-menu .user-nav .sub-menu {
+    left: auto;
+    right: 100%;
+}
+
+/**
+ * Fixed header
+ */
+.fixed-header {
+    position: fixed;
+    top: -160px;
+    left: 0;
+    width: 100%;
+    background-color: $color-1;
+    border-bottom: 1px solid $border-color;
+    opacity: .95;
+    z-index: 999;
+    @include transition(all .4s ease-in-out);
+
+    &.fixed-already {
+        top: 0;
+    }
+
+    .site-header-inner {
+        background-color: transparent;
+        padding: 0;
+
+        .logo {
+            line-height: 46px;
+            padding: 18px 40px 18px 0;
+        }
+    }
+
+    .site-navigation {
+        float: right;
+
+        .dropdown-menu > li > a {
+            padding: 18px 0;
+        }
+    }
+
+    .header-elements {
+        float: right;
+        margin: 25px 0 0;
+        padding-left: 12px;
+
+        li {
+            float: left;
+            position: relative;
+            margin-left: 10px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &.header-cart .text {
+                display: none;
+            }
+        }
+
+        > li > a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            line-height: 30px;
+            font-size: 12px;
+            color: #aaa;
+            border: 1px solid #c6c6c6;
+            text-align: center;
+            @include border-radius(50%);
+
+            &:hover {
+                color: $color-5;
+                border-color: $color-5;
+            }
+
+            i {
+                padding: 0;
+            }
+        }
+
+        > li > .search-link::after, > li > .cart-contents::after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            right: 50%;
+            margin-right: -8px;
+            border-bottom: 10px solid transparent;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            @include transition(all .3s ease);
+        }
+
+        > li.sfHover .search-link::after, > li.sfHover .cart-contents::after {
+            border-bottom-color: $color-6;
+        }
+
+        .sub-menu {
+            top: 150%;
+            left: auto;
+            right: 0;
+        }
+
+        li.header-search {
+            .sub-menu {
+                min-width: 250px;
+                padding: 9px 20px;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            form {
+                position: relative;
+
+                input[type="text"] {
+                    border-color: $border-color;
+                    padding-right: 43px;
+                }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 43px;
+                    height: 100%;
+                    padding: 0;
+                    font-size: 13px;
+                    background-color: transparent;
+                    color: $color-4;
+
+                    &:hover {
+                        color: $color-10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-bar .fixed-header.fixed-already {
+    top: 32px;
+}

@@ -1,0 +1,44 @@
+/**
+ * Header cart
+ */
+.header-cart > a {
+	.count {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        font-weight: bold;
+        background-color: $color-5;
+        color: #fff;
+        text-align: center;
+        @include border-radius(50%);
+    }
+
+    .mobile-count {
+        display: none;
+    }
+}
+
+/**
+ * Cart dropdown
+ */
+.cart-dropdown {
+	min-width: 300px;
+	padding: 20px;
+
+    .widget {
+        margin: 0;
+    }
+}
+
+.dropdown-menu li .cart-dropdown > li {
+	display: inline-block;
+	width: 100%;
+}
+
+.dropdown-menu li .cart-dropdown .product_list_widget li {
+	display: inline-block;
+	margin: 0;
+}

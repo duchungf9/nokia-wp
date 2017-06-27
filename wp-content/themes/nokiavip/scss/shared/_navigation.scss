@@ -1,0 +1,264 @@
+/**
+ * Superfish core style
+ */
+.sf-menu ul.sub-menu {
+    display: none;
+}
+
+.sf-menu li:hover > ul,.sf-menu li.sfHover > ul{
+    display: block;
+}
+
+.sf-menu ul.sub-menu ul{
+    top: 0;
+    left: 100%;
+}
+
+/**
+ * Navigation
+ */
+#site-navigation-wrap {
+    display: block;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+#site-navigation-wrap.container {
+    position: relative;
+}
+
+.dropdown-menu > li:last-child {
+    border-bottom: none;
+}
+
+.site-navigation .dropdown-menu > li {
+    margin: 0 15px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    > a {
+        display: block;
+        font-size: 12px;
+        color: #666;
+        line-height: 46px;
+        text-transform: uppercase;
+    }
+
+    > a:hover,
+    &.sfHover > a,
+    &.current-menu-item > a,
+    &.current-menu-item.sfHover > a,
+    &.current-menu-item > a:hover {
+        color: $color-5;
+    }
+
+    > a .title {
+        position: relative;
+    }
+
+    &.menu-item-has-children > a .title:after {
+        font-family: 'FontAwesome';
+        content: "\f111";
+        position: absolute;
+        bottom: 0;
+        right: -7px;
+        font-size: 4px;
+        line-height: 1;
+        color: #ccc;
+    }
+
+    > a:hover .title:after,
+    &.sfHover > a .title:after,
+    &.current-menu-item > a .title:after,
+    &.current-menu-item.sfHover > a .title:after,
+    &.current-menu-item > a:hover .title:after {
+        color: $color-6;
+    }
+}
+
+/**
+ * Dropdown
+ */
+.dropdown-menu,
+.dropdown-menu * {
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-menu li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+
+    &:hover {
+        transition: none;
+    }
+
+    a {
+        zoom: 1;
+    }
+
+    .sub-menu li {
+        display: block;
+    }
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    line-height: 1;
+    padding: 10px 0;
+    background-color: #fff;
+    border-top: 2px solid $color-6;
+    text-align: left;
+    z-index: 999;
+    @include box-shadow(0 2px 5px rgba(0, 0, 0, 0.1));
+}
+
+.dropdown-menu ul {
+    a {
+        display: block;
+        float: none;
+        font-size: 12px;
+        color: #8a8a8a;
+        padding: 10px 20px;
+        text-transform: uppercase;
+    }
+
+    a:hover,
+    > li.current-menu-item > a  {
+        color: $color-6;
+    }
+
+    li:last-child a {
+        border-bottom: 0;
+    }
+}
+
+.dropdown-menu .sub-menu a .nav-arrow {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -7px;
+    font-size: 16px;
+
+    &.plus::after {
+        content: '+';
+    }
+}
+
+.dropdown-menu .sub-menu > .sfHover > a .nav-arrow.plus::after {
+    content: '-';
+}
+
+.dropdown-menu ul li a i {
+    position: relative;
+    width: 20px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+/**
+ * Icons
+ */
+.dropdown-menu li a i {
+    padding-right: 5px;
+}
+
+/**
+ * Megamenu
+ */
+.main-navigation .megamenu {
+    padding: 20px 0;
+
+    a .nav-arrow {
+        display: none;
+    }
+
+    > li {
+        float: left !important;
+        border-left-width: 1px;
+        border-style: solid;
+        border-color: $border-color;
+    }
+
+    > li:first-child {
+        border-left: none;
+    }
+
+    > li > a {
+        color: #000;
+        line-height: 30px;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        text-transform: uppercase;
+    }
+
+    > li > a:hover {
+        color: $color-6;
+    }
+
+    > ul li {
+        width: 100%; 
+    }
+
+    aside.widget {
+        padding: 0 20px;
+        margin-bottom: 0;
+    }
+}
+
+.main-navigation .megamenu .sub-menu,
+.main-navigation.sf-menu .megamenu ul.sub-menu {
+    display: block !important;
+    opacity: 1 !important;
+    min-width: 100%;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    border: 0;
+}
+
+/**
+ * Megamenu columns
+ */
+.main-navigation .megamenu {
+    &.columns-2 > li { width: 50%; }
+    &.columns-3 > li { width: 33.33333333%; }
+    &.columns-4 > li { width: 25%; }
+    &.columns-5 > li { width: 20%; }
+    &.columns-6 > li { width: 16.66666667%; }
+}
+
+/**
+ * Megamenu auto width
+ */
+@media only screen and (min-width: 959px) {
+    .main-navigation .mega-auto-width .megamenu {
+        &.columns-2 ul li:nth-child(2n+1), &.columns-3 ul li:nth-child(3n+1),
+        &.columns-4 ul li:nth-child(4n+1), &.columns-5 ul li:nth-child(5n+1),
+        &.columns-6 ul li:nth-child(6n+1) { clear: both; }
+        &.columns-2 { width: 440px; }
+        &.columns-3 { width: 660px; }
+        &.columns-4 { width: 780px; }
+        &.columns-5 { width: 980px; }
+        &.columns-6 { width: 1080px; }
+    }
+}
+
+/**
+ * Item description
+ */
+.nav-content {
+    display: block;
+    font-size: 11px;
+    line-height: 1em;
+    padding-bottom: 5px;
+    opacity: 0.7;
+}

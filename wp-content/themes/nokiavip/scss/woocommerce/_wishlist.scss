@@ -1,0 +1,161 @@
+/**
+ * Table wishlist
+ */
+.wishlist-title h2 {
+    display: inline-block;
+    font-size: 26px;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.woocommerce table.wishlist_table {
+	font-size: 100% !important;
+
+	thead th {
+		border-top: 0;
+	}
+
+	tbody td {
+		text-align: left;
+
+		&.product-add-to-cart {
+			text-align: center;
+		}
+	}
+}
+
+.woocommerce table.wishlist_table tr td.product-remove {
+    text-align: center;
+}
+
+.woocommerce #content table.wishlist_table.cart a.remove {
+	font-size: 25px;
+    line-height: 23px;
+	@include border-radius(2px);
+
+	&:hover {
+	    background-color: $color-10;
+	    border-color: $color-10;
+	    color: #fff;
+	}
+}
+
+.woocommerce .wishlist_table td.product-add-to-cart a {
+	display: inline-block !important;
+    font-size: 12px;
+    line-height: 1;
+    padding: 8px 20px;
+    margin-top: 10px;
+    color: #999;
+    border: 1px solid $border-color;
+    letter-spacing: 0.6px;
+    text-align: center;
+    text-transform: uppercase;
+    @include border-radius(20px);
+
+    &:hover {
+		color: $color-6;
+	    border-color: $color-6;
+	}
+}
+
+/*share wishlist*/
+.woocommerce-wishlist.woocommerce .yith-wcwl-share li {
+	margin-right: 8px;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	a {
+		background: transparent;
+	}
+}
+
+.yith-wcwl-share {
+	margin-bottom: 0;
+
+	h4 {
+		display: inline-block;
+		text-align: center;
+		margin: 20px 15px !important;
+		font-size: 20px;
+	}
+
+	ul, li {
+		display: inline-block;
+		height: auto;
+		text-align: center;
+		margin: 0;
+	}
+
+	li {
+		a {
+			background: transparent;
+			font-size: 16px;
+			width: 40px;
+			height: 40px;
+			line-height: 38px;
+			text-align: center;
+			color: #999;
+			border: 1px solid #ccc;
+			@include border-radius(50%);
+
+			&:hover {
+				color: $color-1;
+			}
+
+			&:before {
+				font-family: "FontAwesome";
+				font-style: normal;
+				font-weight: normal;
+				text-decoration: inherit;
+			}
+
+			&.facebook:before {
+				content: "\f09a";
+			}
+
+			&.twitter:before {
+				content: "\f099";
+			}
+
+			&.pinterest:before {
+				content: "\f231";
+			}
+
+			&.googleplus:before {
+				content: "\f0d5";
+			}
+
+			&.email:before {
+				content: "\f003";
+			}
+
+			&.facebook:hover {
+				background: #39599f;
+				border-color: #39599f;
+			}
+
+			&.twitter:hover {
+				background: #40bff5;
+				border-color: #40bff5;
+			}
+
+			&.pinterest:hover {
+				background: #b8242a;
+				border-color: #b8242a;
+			}
+
+			&.googleplus:hover {
+				background: #eb5b4c;
+				border-color: #eb5b4c;
+			}
+
+			&.email:hover {
+				background: #fdb200;
+				border-color: #fdb200;
+			}
+		}
+	}
+}

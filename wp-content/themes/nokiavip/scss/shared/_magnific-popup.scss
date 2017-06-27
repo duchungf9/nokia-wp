@@ -1,0 +1,169 @@
+.mfp-bg {
+    background: #000;
+}
+
+.mfp-zoom-out-cur {
+    cursor: url('./assets/img/popup-cursor.png'), pointer;
+}
+
+.mfp-title {
+    display: none;
+    margin-top: 10px;
+    padding-right: 0;
+}
+
+/**
+ * Fade-move animation for second dialog
+ */
+ /* at start */
+ .my-mfp-slide-bottom .zoom-anim-dialog, 
+.my-mfp-slide-bottom .quick-view-popup,
+.my-mfp-slide-bottom .mfp-figure {
+	opacity: 0;
+	@include transition(all 0.2s ease-out);
+	@include transform(translateY(-20px) perspective(600px) rotateX(10deg));
+
+	&.effect-rotate .quick-view-popup,
+	&.effect-rotate .mfp-figure {
+		opacity: 0;
+		@include transition(all .4s ease-out);
+	}
+}
+/* animate in */
+ .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog,
+.my-mfp-slide-bottom.mfp-ready .quick-view-popup,
+.my-mfp-slide-bottom.mfp-ready .mfp-figure {
+	opacity: 1;
+	@include transform(translateY(0) perspective(600px) rotateX(0));
+}
+/* animate out */
+ .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog,
+.my-mfp-slide-bottom.mfp-removing .quick-view-popup,
+.my-mfp-slide-bottom.mfp-removing .mfp-figure {
+	opacity: 0;
+	@include transform(translateY(-10px) perspective(600px) rotateX(10deg));
+}
+
+/**
+ * Modal popup
+ */
+.modal {
+    width: 600px;
+    margin: 0 auto;
+    max-width: 85%;
+
+    .modal-dialog {
+        background-color: $color-1;
+        padding: 36px 20px;
+        width: 100%;
+        margin: 0 auto;
+
+        &.text-center {
+            text-align: center;
+        }
+
+        h3 {
+            font-weight: 600;
+            text-transform: uppercase;
+            margin: 0 0 5px;
+        }
+
+        .modal-form {
+            width: 84%;
+            margin: 30px auto 0;
+
+            .form-input {
+                margin-bottom: 15px;
+            }
+
+            button {
+                padding: 10px 40px;
+            }
+        }
+    }
+}
+
+.modal .modal-dialog, .mfp-figure figure {
+    @include box-shadow(0 0 0 15px rgba(255,255,255,.2));
+}
+
+/**
+ * img
+ */
+.mfp-figure {
+
+	figure img {
+	    padding: 0;
+	    margin: 0;
+	    max-width: 100%;
+	}
+
+    &:after {
+        box-shadow: none;
+    }
+}
+
+/**
+ * Close button
+ */
+.mfp-close {
+    position: absolute;
+    top: -55px;
+    right: 0 !important;
+    width: 26px !important;
+    height: 26px !important;
+    min-height: 26px;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    background-image: url('./assets/img/close.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 7px 7px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+	@include transition(all .3s ease-in-out);
+
+	&:active {
+	    top: -55px;
+	}
+}
+
+/**
+ * Counter
+ */
+.mfp-bottom-bar {
+	margin-top: 0;
+}
+
+.mfp-counter {
+    top: 18px;
+    left: 50%;
+    margin-left: -15px;
+    font-size: 13px;
+}
+
+/**
+ * Next/Prev buttons
+ */
+.mfp-arrow:after {
+    display: none;
+}
+
+.mfp-arrow:before {
+    font-family: FontAwesome !important;
+    font-size: 36px;
+    top: 50%;
+    margin-top: -18px;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+    border: 0;
+    text-align: center;
+}
+
+.mfp-arrow-left:before {
+    content: '\f104';
+}
+
+.mfp-arrow-right:before {
+    content: '\f105';
+}

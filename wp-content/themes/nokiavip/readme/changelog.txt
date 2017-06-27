@@ -1,0 +1,10 @@
+1.0.2 - 06/06/2016
+* Fixed: Compatibility with WordPress 4.5
+
+1.0.1 - 02/01/2016
+* Added: 4 pre-defined layouts
+* Fixed: Problem pagination on static page
+* Fixed: Problem layout on templates page
+
+1.0.0 - 16/12/2015
+* Initial release

@@ -1,0 +1,102 @@
+// Import helpers files
+// -------------------------------------------------
+
+// Variables
+@import "helpers/font-stacks";
+@import "helpers/color-palettes";
+
+// Mixins
+@import "helpers/mixins";
+
+// Animation
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+     -moz-animation: $animation;
+      -ms-animation: $animation;
+       -o-animation: $animation;
+          animation: $animation;
+}
+
+// Transition
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+// Transform
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+// Border radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Box shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+      	  box-shadow: $shadow;
+}
+
+// Typography Variables
+// -------------------------------------------------
+
+// Basic Typography
+$base-font-family:     'Open Sans', sans-serif !default;
+$base-font-size:       14px;
+$base-line-height:     24px;
+$font-size:            $base-font-size !default;
+$browser-font-size:    14px !default;
+
+// Body type
+$body-font-family:     'Lato', sans-serif !default;
+
+// Heading type
+$heading-font-family:  'Lato', sans-serif !default;
+$heading-font-weight:  700 !default;
+$heading-font-style:   normal !default;
+
+// Color Variables
+// -------------------------------------------------
+
+// Project base color
+// ==================================
+$color-1:             #fff !default;
+$color-2:             #000 !default;
+$color-3:             #929292 !default;
+$color-4:             #555 !default;
+$color-5:             #f3b714 !default;
+$color-6:             #fab000 !default;
+$color-7:             #444 !default;
+$color-8:             #999 !default;
+$color-9:             #ebebeb !default;
+$color-10:            #333 !default;
+
+// ===================================
+
+// Base colors
+$body-bg-color:        $color-1 !default;
+$border-color:         $color-9 !default;
+$selection-bg-color:   $color-2 !default;
+$selection-font-color: $color-1 !default;
+
+// Typography colors
+$body-font-color:      $color-3 !default;
+$heading-font-color:   $color-7 !default;
+
+// Link colors
+$link-color:           $color-4 !default;
+$link-hover-color:     $color-5 !default;

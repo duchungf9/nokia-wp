@@ -1,0 +1,62 @@
+.container {
+	max-width: 1180px;
+    margin: 0 auto;
+}
+
+#content #content-wrap {
+	margin: 40px auto;
+}
+
+.page-fullscreen #content-wrap.container {
+	max-width: 100%;
+}
+
+.no-margin #content #content-wrap {
+	margin: 0 auto;
+}
+
+.layout-2c-l {
+
+	.content-area {
+		float: left;
+		position: relative;
+		width: 73%;
+	}
+
+	.widget-area {
+		float: right;
+		width: 23%;
+	}
+
+}
+
+.layout-2c-r {
+
+	.content-area {
+		float: right;
+		position: relative;
+		width: 73%;
+	}
+
+	.widget-area {
+		float: left;
+		width: 23%;
+	}
+
+}
+
+.layout-1c {
+
+	.content-area {
+		width: 100%;
+	}
+
+}
+
+.entry-content .no-padding > .panel-grid-cell {
+	padding: 0 !important;
+}
+
+.entry-content .no-margin > .panel-grid-cell {
+	margin: 0 !important;
+}

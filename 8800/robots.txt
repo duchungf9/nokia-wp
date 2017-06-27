@@ -1,0 +1,4 @@
+User-agent: *
+Allow:
+Disallow: /wp-admin/
+Sitemap: http://coccoc.oms.vn/sitemap_index.xml
